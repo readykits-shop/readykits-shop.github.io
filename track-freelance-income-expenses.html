@@ -1,0 +1,178 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>How to Track Freelance Income and Expenses (Simple Spreadsheet Method)</title><meta name=description content="A simple spreadsheet system for freelancers: an income log, expense categories, a 25-30% tax set-aside, overdue invoice tracking and a quarterly review."><style>body{font-family:system-ui,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.65;color:#1f2937}a{color:#0f766e}table{border-collapse:collapse}td,th{border:1px solid #ddd;padding:6px 10px}blockquote{border-left:4px solid #0f766e;margin:0;padding-left:16px;color:#374151}header a{font-weight:700;text-decoration:none}</style></head><body><header><a href='/'>ReadyKits</a> · freelance guides</header><h1>How to Track Freelance Income and Expenses (The Simple Spreadsheet Method)</h1>
+<p>When you're freelancing, nobody does your bookkeeping for you. There's no payroll department and no withholding, and no one reminds you that taxes are due. You don't need accounting software to get it right, though. One spreadsheet with a few tabs and 30 minutes a month is enough for most solo freelancers.</p>
+<p>Here's a setup that works, and what each part is for.</p>
+<p><em>General information, not tax advice. Tax rules depend on your situation and where you live. US points below are based on IRS guidance as of 2026. For anything specific, check IRS.gov or talk to a tax professional.</em></p>
+<h2>Why bother tracking at all?</h2>
+<p>Three reasons, all practical:</p>
+<ol>
+<li><strong>Taxes.</strong> In the US, freelance profit goes on <strong>Schedule C</strong> (Profit or Loss From Business) with your Form 1040. Your profit is income minus deductible business expenses, so every expense you can't document means paying tax on money you didn't actually keep.</li>
+<li><strong>Cash flow.</strong> Knowing who owes you and how late they are is the difference between a calm month and a panicked one.</li>
+<li><strong>Pricing.</strong> Once you can see your real profit and real expenses, you can tell whether your rates actually work.</li>
+</ol>
+<h2>Tab 1: Income log</h2>
+<p>Record a row for every payment you receive:</p>
+<table>
+<thead>
+<tr>
+<th>Date paid</th>
+<th>Client</th>
+<th>Invoice #</th>
+<th>Amount</th>
+<th>Method</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mar 3</td>
+<td>Acme Design</td>
+<td>INV-0012</td>
+<td>$1,200</td>
+<td>ACH</td>
+<td>Homepage project, final</td>
+</tr>
+</tbody>
+</table>
+<p>A few habits make this log much more useful:</p>
+<ul>
+<li><strong>Log when the money lands, not when you invoice.</strong> Most freelancers use the cash method, which means income counts when you receive it. Unpaid invoices go in a separate tab (see Tab 3).</li>
+<li><strong>Record everything, including small or cash jobs.</strong> In the US you have to report all business income, whether or not you get a 1099 form. For payments made from 2026 onward, clients generally only send a 1099-NEC once they've paid you $2,000 or more in a year, so many smaller clients won't send one at all. The income still counts.</li>
+<li><strong>Note platform fees separately.</strong> If a marketplace or payment processor takes a cut, record the gross amount as income and the fee as an expense. That way your numbers match the 1099-K or other forms you may receive.</li>
+</ul>
+<h2>Tab 2: Expenses by category</h2>
+<p>The IRS allows deductions for business expenses that are "ordinary and necessary" for your work. Give each expense a category so the totals are easy to move onto your return at tax time. A simple set that covers most freelancers:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Software &amp; subscriptions</td>
+<td>Design tools, hosting, accounting app, cloud storage</td>
+</tr>
+<tr>
+<td>Equipment</td>
+<td>Laptop, camera, monitor (larger purchases may be depreciated)</td>
+</tr>
+<tr>
+<td>Home office</td>
+<td>Only if you use a space regularly and exclusively for work</td>
+</tr>
+<tr>
+<td>Travel &amp; mileage</td>
+<td>Client visits, business trips; keep a mileage log</td>
+</tr>
+<tr>
+<td>Marketing</td>
+<td>Website, portfolio, business cards</td>
+</tr>
+<tr>
+<td>Education</td>
+<td>Courses and books related to your current work</td>
+</tr>
+<tr>
+<td>Contractors</td>
+<td>Subcontractors you pay (you may owe them a 1099-NEC too)</td>
+</tr>
+<tr>
+<td>Fees</td>
+<td>Bank, payment processor and platform fees</td>
+</tr>
+<tr>
+<td>Other</td>
+<td>Anything that doesn't fit, with a note</td>
+</tr>
+</tbody>
+</table>
+<p>For each expense, record the date, vendor, category, amount and whether you've saved the receipt. Snap a photo of each receipt and keep it in a folder named by year. The IRS generally expects you to keep records that support your return for at least three years, and longer in some situations.</p>
+<p>Two rules keep this clean: <strong>keep business and personal spending in separate accounts</strong>, and <strong>don't guess percentages</strong>. If something is partly personal, like a phone, only the business share is deductible, and you should be able to explain how you worked it out.</p>
+<h2>Tab 3: Invoices and overdue days</h2>
+<p>This tab is your accounts receivable, meaning money that clients owe you.</p>
+<table>
+<thead>
+<tr>
+<th>Invoice #</th>
+<th>Client</th>
+<th>Issued</th>
+<th>Due</th>
+<th>Amount</th>
+<th>Paid date</th>
+<th>Days overdue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Add a formula for "days overdue" so the sheet does the counting for you. In Excel or Google Sheets, with the due date in column D and the paid date in column F:</p>
+<p><code>=IF(AND(D2&lt;&gt;"",F2=""),MAX(0,TODAY()-D2),"")</code></p>
+<p>Then sort by that column every Monday. Anything above zero gets a polite reminder. Anything above 7 gets the late-fee reminder, if your contract has a late fee. The <a href="/free-freelance-invoice-template.html">freelance invoice template guide</a> has a simple follow-up schedule, and the guide to <a href="/freelance-contract-template-clauses.html">freelance contract clauses</a> explains how to set up late fees and pausing work in your contract.</p>
+<h2>The tax set-aside: 25–30% of profit</h2>
+<p>This is the habit that saves the most stress. Every time a payment comes in, move a fixed share of it into a separate savings account and don't touch it.</p>
+<p>Why 25–30%? As a US freelancer you typically owe two things:</p>
+<ul>
+<li><strong>Self-employment tax</strong> for Social Security and Medicare. It's 15.3% on most of your net self-employment earnings (the Social Security part stops above a yearly earnings cap), and it applies once net earnings reach $400.</li>
+<li><strong>Income tax</strong> on your profit, at your federal rate and, in most states, a state rate too.</li>
+</ul>
+<p>Together these often come to roughly a quarter to a third of profit, though your number could be lower or higher depending on your income, deductions, state and household situation. <strong>25–30% is a rule of thumb, not a calculation.</strong> After your first year, compare what you set aside with what you actually owed and adjust. If you also have a day job with withholding, your number may be lower.</p>
+<p>On a dashboard tab, one formula is enough: <code>Set aside = (Paid income − Expenses) × 28%</code>.</p>
+<h2>Quarterly estimated taxes</h2>
+<p>Because no one withholds tax from freelance income, the IRS generally expects you to pay during the year using <strong>estimated tax payments (Form 1040-ES)</strong> if you expect to owe $1,000 or more when you file. For the 2026 tax year, the due dates are:</p>
+<table>
+<thead>
+<tr>
+<th>Payment</th>
+<th>Covers income earned</th>
+<th>Due</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Jan 1 – Mar 31</td>
+<td>April 15, 2026</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Apr 1 – May 31</td>
+<td>June 15, 2026</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Jun 1 – Aug 31</td>
+<td>September 15, 2026</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sep 1 – Dec 31</td>
+<td>January 15, 2027</td>
+</tr>
+</tbody>
+</table>
+<p>If a date falls on a weekend or holiday, it moves to the next business day. Missing or underpaying can bring an underpayment penalty. A common way to avoid it is the "safe harbor": pay at least 90% of this year's tax, or 100% of last year's total tax (110% if your income was over $150,000), spread across the four payments. You can pay online through IRS Direct Pay or your IRS online account. Many states have their own estimated tax payments too.</p>
+<p>Add a small tab that logs each payment: quarter, due date, amount, date paid.</p>
+<h2>The quarterly review (30 minutes)</h2>
+<p>Before each estimated-tax due date, sit down with the spreadsheet and go through it:</p>
+<ol>
+<li><strong>Reconcile.</strong> Check the income log against your bank deposits. Anything missing?</li>
+<li><strong>Categorize.</strong> Give every expense a category and check that its receipt is saved.</li>
+<li><strong>Chase.</strong> Follow up on every overdue invoice.</li>
+<li><strong>Check the set-aside.</strong> Does the tax savings balance match roughly 25–30% of profit so far?</li>
+<li><strong>Pay the estimate</strong> and log it.</li>
+<li><strong>Look at the trend.</strong> Is profit up or down? Is one client more than half your income? Are your rates still right? The <a href="/freelance-rate-calculator.html">freelance rate calculator guide</a> helps you re-check them.</li>
+</ol>
+<p>Do this four times a year and filing in spring stops being a scramble. Your Schedule C numbers are already summed by category.</p>
+<h2>Skip the setup</h2>
+<p>You can build all of this yourself from the tables above. If you'd rather start with it done, the <a href="https://readykitsshop.gumroad.com/l/rrrlb">Freelance Client &amp; Invoice Tracker</a> is a ready-made Excel and Google Sheets file with these tabs: clients, projects, invoices with automatic overdue days, expenses with the categories above, a quarterly estimated-tax log, and a dashboard showing paid vs. outstanding, profit and your tax set-aside.</p>
+<p>New to freelancing? The <a href="https://readykitsshop.gumroad.com/l/ispwj">free Freelance &amp; Side-Hustle Starter Checklist</a> covers the rest of the week-one setup: business bank account, EIN, pricing and contracts.</p><footer><p><small>General information, not legal or tax advice. © ReadyKits</small></p></footer></body></html>
